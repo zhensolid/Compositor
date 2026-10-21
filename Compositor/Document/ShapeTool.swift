@@ -51,6 +51,9 @@ nonisolated enum ShapeKind: String, CaseIterable, Codable, Sendable {
         path.closeSubpath()
         return path
     }
+
+    /// The localized name.
+    var localizedName: String { rawValue.localized }
 }
 
 /// How a Line shape's stroke is broken up.

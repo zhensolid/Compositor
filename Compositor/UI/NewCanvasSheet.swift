@@ -152,8 +152,8 @@ struct NewCanvasSheet: View {
                     .font(.callout).foregroundStyle(.orange)
             }
             HStack(spacing: 10) {
-                Button("Open project") { onOpen?() }.buttonStyle(.bordered)
-                Button("Import") { session.showsImporter = true }.buttonStyle(.bordered)
+                Button("Open project".localized) { onOpen?() }.buttonStyle(.bordered)
+                Button("Import image".localized) { session.showsImporter = true }.buttonStyle(.bordered)
                 Spacer()
                 Button("Create canvas") {
                     guard let w = pixelWidth, let h = pixelHeight else { return }
